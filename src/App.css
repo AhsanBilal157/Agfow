@@ -1,38 +1,511 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --green:#1A8324;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    outline: none;
+    text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+*::selection{
+    background:var(--green);
+    color:#fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.btn{
+    border:.2rem solid var(--green);
+    color:var(--green);
+    background:none;
+    padding:.5rem 3rem;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 0;
+    font-size: 2rem;
+    border-radius: 20px;
+    background:var(--green);
+    color:white
+}
+
+.btn::before{
+    position: absolute;
+    top:0; left: 0;
+    height:100%;
+    width:100%;
+    background:var(--green);
+    border-radius: 20px;
+    z-index: -1;
+    clip-path: circle(0% at 0% 0%);
+    transition: .3s;
+}
+
+.btn:hover::before{
+    clip-path: circle(100%);
+}
+
+.btn:hover{
+    color:#fff;
+}
+
+.heading{
+    display: inline-block;
+    color:#333;
+    margin:2rem 0;
+    padding:1rem 0;
+    padding-top: 8rem;
+    font-size: 3rem;
+    border-bottom: .2rem solid var(--green);
+}
+
+header{
+  width: 100%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  position: fixed;
+  top:0; left: 0;
+  z-index: 1000;
+  padding:2rem 3rem;
+}
+
+
+
+header .navbar ul{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .navbar ul li{
+  margin:0 1rem;
+}
+
+header .navbar ul li a{
+  color:#fff;
+  font-size: 2rem;
+}
+
+header .navbar ul li a.active,
+header .navbar ul li a:hover{
+  color:rgb(233, 198, 2);
+}
+
+header #menu{
+  font-size: 3rem;
+  color:var(--green);
+  cursor: pointer;
+  display: none;
+}
+
+header.header-active{
+  background:#fff;
+  box-shadow: 0 .1rem .3rem rgba(0,0,0,.3);
+}
+header.header-active .logo,
+header.header-active .navbar a{
+    color:green;
+}
+
+.home{
+    min-height: 100vh;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../images/farmpic4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    /*border-bottom-right-radius: 120px;*/
+}
+
+.home h1{
+    font-size: 4rem;
+    color:#fff;
+    text-align: center;
+    text-shadow: 0 .3rem .5rem #000;
+    padding:0 1rem;
+    text-transform: uppercase;
+}
+
+.home .btn{
+    box-shadow: 0 .3rem .5rem #000;
+    color:#fff;
+}
+.services{
+  background-color: #E7EDDF;
+  display: flex;
+  padding: 120px 20px;
+  justify-content: space-evenly;
+  color: var(--green);
+}
+.servicesimage
+{
+  padding-left: 25px;
+  height:80px;
+
+}
+.servicesportionservices{
+  display:flex;
+  justify-content:space-evenly;
+}
+.servicestitle{
+
+font-family: Sedan SC;
+font-style: normal;
+font-weight: bold;
+font-size: 50px;
+line-height: 55px;
+/* identical to box height, or 51% */
+
+text-align: center;
+letter-spacing: 0.1em;
+
+color: #1A8324;
+}
+.cardtitle{
+  font-family:'Sawarabi Mincho';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #1A8324;
+  letter-spacing: 0.1em;
+}
+.wheathercardtitle{
+  font-family:'roboto';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 10px;
+  text-align: center;
+  color: #1A8324;
+}
+.paper{
+  display:'flex';
+  flex-wrap:'wrap';
+  align-items:'center';
+  justify-content:'center'
+}
+.textfield{
+  color:'white';
+  width:'200px';
+  font-size:'20px';
+  border-radius:'20px';
+}
+.grenback{
+  background: green;
+  height: 30rem;
+  width: 30rem;
+  border-radius: 50%;
+}
+
+.kissanportion{
+  display:flex;
+}
+.kissanportionimg
+{
+  padding-left: 80px;
+  padding-bottom:30px;
+ /* position: absolute;*/
+  z-index: 1;
+  margin-top: -40px;
+
+}
+.kissanimg{
+  height: 800px;
+}
+
+.kissanportiondiv
+{
+  padding-left: 180px;
+  margin-top: 50px;
+
+
+}
+.whetherportion{
+  min-height: 80vh;
+    background:linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(../images/wheatherimg.jpg) no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+.tab2wheather{
+  display: flex;
+   padding: 10px 60px;
+}
+.Newsportion{
+  padding:20px 150px;
+}
+.titlecardnews{
+  padding:20px 40px;
+   color:green;
+}
+.mediumcardnews{
+  padding-left:450px;
+}
+#newstitle{
+
+  font-family: Sedan SC;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 42px;
+  /* identical to box height, or 51% */
+  
+  text-align: center;
+  letter-spacing: 0.1em;
+  
+  color: #1A8324;
+  }
+  .newsimg{
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .queryportionheading1{
+    text-align:'center';
+     font-size:35px;
+  }
+  .queryportionheading2{
+    text-align:'center';
+      font-size:20px;
+    }
+    .queryportionimage1{
+      height:150px;
+       padding-left:120px;
+    }
+.queryportion{
+  background-color: #E7EDDF;
+  display:flex;
+  justify-content: space-around;
+
+
+  padding: 47px;
+}
+.queryportion>div:first-of-type {
+  border-right: 1px solid #b3b3b3;
+  }
+  .queryportioninputs{
+  padding:10px 140px}
+  .footerbc{
+    background-color: var(--green);
+  }
+.footer{
+  
+  display:flex;
+direction: row;
+flex-wrap:wrap ;
+justify-content: space-evenly;
+padding: 20px;
+}
+.footerimg{
+  height:60px;
+
+}
+.footerheading{
+  font-family: Sawarabi Mincho;
+  text-align: center;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.links h2{
+  line-height: 28px;
+}
+.linksheadings{
+  line-height: 30px;
+}
+.box{
+  height: 180px;
+  width: 600px;
+  box-shadow: 0px 5px 5px -3px rgb(0 0 0 / 20%), 0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%);
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+/* media queries  */
+
+
+
+@media (max-width:1200px){
+.mediumcardnews{
+  padding-left:350px;
+}
+}
+@media (max-width:1100px){
+  .mediumcardnews{
+    padding-left:250px;
   }
-  to {
-    transform: rotate(360deg);
   }
+  @media (max-width:1000px){
+    .mediumcardnews{
+      padding-left:150px;
+    }
+    }
+
+
+@media (max-width:768px){
+
+  html{
+      font-size: 55%;
+  }
+
+  header #menu{
+      display: block;
+  }
+
+  header .navbar{
+      position: fixed;
+      top:-100rem; left: 0;
+      width: 100%;
+      opacity: 0;
+      background:#fff;
+      border-top: .1rem solid rgba(0,0,0,.3);
+  }
+
+  header .navbar ul{
+      flex-flow: column;
+      padding:2rem 0;
+  }
+
+  header .navbar ul li{
+      margin:1rem 0;
+      text-align: center;
+      width: 100%;
+  }
+
+  header .navbar ul li a{
+      font-size: 2.5rem;
+      color: #333;
+      display: block;
+  }
+
+  header .navbar.nav-toggle{
+      top:8rem;
+      opacity: 1;
+  }
+
+  .register form{
+      width:90%;
+  }
+  .services{
+   
+    display: block;
+    padding: 10px 40px;
+    
+  }
+  .kissanimg{
+    height: 800px;
+  }
+  .kissanportion{
+    display:block;
+  
+  }
+  .tab2wheather{
+    display: block;
+  }
+  .Newsportion{
+    padding:20px 50px;
+  }
+  
+  .mediumcardnews{
+    padding-left:0px;
+  }
+  .queryportion{
+    
+    display:block;
+    
+  
+  }
+  .queryportion>div:first-of-type {
+    border-right: 0px solid #b3b3b3;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width:500px){
+
+  html{
+      font-size: 50%;
+  }
+
+  .home h1{
+      font-size: 5rem;
+  }
+
+  .register form .inputBox input{
+      width:100%;
+  }
+  .servicesportionservices{
+    display:block
+  }
+  .servicesimage
+{
+  padding-left: 160px;
+  height:60px;
+
+}
+.Newsportion{
+  padding:20px 120px;
+}
+.kissanimg{
+  height: 500px;
+}
+.box{
+  height: 400px;
+  width: 270px;
+  
+  display: block;
+}
+.newsimg{
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.queryportionheading1{
+  
+   font-size:25px;
+   font-weight: bold;
+}
+.queryportionheading2{
+  
+    font-size:15px;
+  }
+  .queryportionimage1{
+    height:120px;
+     padding-left:25px;
+  }
+  .queryportioninputs{
+    padding:10px 50px}
+    .footer{
+  
+      display:block;
+    
+    }
+    .footerimg{
+      padding: 0px 120px;
+      
+    }
 }
