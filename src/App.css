@@ -289,6 +289,9 @@ color: #1A8324;
       height:150px;
        padding-left:120px;
     }
+    .Contactportionpadding{
+         padding: 10px 115px
+    }
 .queryportion{
   background-color: #E7EDDF;
   display:flex;
@@ -302,6 +305,8 @@ color: #1A8324;
   }
   .queryportioninputs{
   padding:10px 140px}
+  .queryportioninputswidth{
+  width:300px}
   .footerbc{
     background-color: var(--green);
   }
@@ -473,6 +478,7 @@ padding: 20px;
 .kissanimg{
   height: 500px;
 }
+
 .box{
   height: 400px;
   width: 270px;
@@ -489,6 +495,7 @@ padding: 20px;
    font-size:25px;
    font-weight: bold;
 }
+
 .queryportionheading2{
   
     font-size:15px;
@@ -499,6 +506,89 @@ padding: 20px;
   }
   .queryportioninputs{
     padding:10px 50px}
+    .footer{
+  
+      display:block;
+    
+    }
+    .footerimg{
+      padding: 0px 120px;
+      
+    }
+}
+
+
+@media (max-width:414px){
+
+  html{
+      font-size: 50%;
+  }
+
+  .home h1{
+      font-size: 5rem;
+  }
+
+  .register form .inputBox input{
+      width:100%;
+  }
+  .servicesportionservices{
+    display:block
+  }
+  .servicesimage
+{
+  padding-left: 120px;
+  height:60px;
+
+}
+.Newsportion{
+  padding:20px 45px;
+}
+.kissanportionimg
+{
+  padding-left: 50px;
+  
+
+}
+.kissanportiondiv
+{
+  padding-left: 90px;
+
+
+}
+.kissanimg{
+  height: 400px;
+}
+.box{
+  height: 400px;
+  width: 270px;
+  
+  display: block;
+}
+.newsimg{
+  border-radius: 10px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.Contactportionpadding{
+  padding: 10px 45px
+}
+.queryportionheading1{
+  
+   font-size:25px;
+   font-weight: bold;
+}
+.queryportionheading2{
+  
+    font-size:15px;
+  }
+  .queryportionimage1{
+    height:120px;
+     padding-left:25px;
+  }
+  .queryportioninputs{
+    padding:10px 0px}
+    .queryportioninputswidth{
+      width:250px}
     .footer{
   
       display:block;

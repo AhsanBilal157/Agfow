@@ -149,7 +149,7 @@ export const Home = () =>{
 
         <section class="home" id="home">
 
-<h1> " Lets revolutionized your farm into <br /> smart farm "</h1>
+<h1> " Let's revolutionise your farm into <br /> smart farm "</h1>
 
 <button className="btn">Learn more</button>
 
@@ -563,7 +563,7 @@ export const Home = () =>{
     <br />
     <section id="Contactus">
 <div className="queryportion">
-<div data-aos="fade-left" style={{    padding: '10px 115px'}}>
+<div data-aos="fade-left" className="Contactportionpadding">
   <br />
   <h1 className="queryportionheading1">We are Here to Help ! </h1><br /><br />
   <img src={farmerhelp} alt="farmerhelp" className="queryportionimage1"/><br /><br /><br />
@@ -578,8 +578,8 @@ question you can contact us </h2><br /><br />
 <br />
 <br /><br />
 
-  <TextField id="filled-basic" label="Name" variant="filled" style={{width:'300px'}}/><br/><br />
-    <TextField id="filled-basic" label="Phone" variant="filled" style={{width:'300px'}}/><br/><br />
+  <TextField id="filled-basic" label="Name" variant="filled" className='queryportioninputswidth'/><br/><br />
+    <TextField id="filled-basic" label="Phone" variant="filled" className='queryportioninputswidth'/><br/><br />
     <TextField
           id="filled-multiline-static"
           label="Comment"
@@ -587,7 +587,7 @@ question you can contact us </h2><br /><br />
           rows={4}
           defaultValue="Write your comment here .."
           variant="filled"
-          style={{width:'300px'}}
+          className='queryportioninputswidth'
         /><br />
         <br />
         <br />
