@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/Agfow/static/css/main.91de947d.css",
+    "main.js": "/Agfow/static/js/main.abf8f17c.js",
+    "static/js/787.8bc61f73.chunk.js": "/Agfow/static/js/787.8bc61f73.chunk.js",
+    "static/media/kissanimg.png": "/Agfow/static/media/kissanimg.60d96e0f2365c368165a.png",
+    "static/media/farmpic4.jpg": "/Agfow/static/media/farmpic4.5b93e0c17cb5100a5691.jpg",
+    "static/media/wheatherimg.jpg": "/Agfow/static/media/wheatherimg.ab67ab43ff0a248e6965.jpg",
+    "static/media/farmhelpinblue.png": "/Agfow/static/media/farmhelpinblue.2dadb199b093905740d5.png",
+    "static/media/trackter.jpeg": "/Agfow/static/media/trackter.d9cef189425ab796b575.jpeg",
+    "static/media/fbicon.png": "/Agfow/static/media/fbicon.186a975a858126661f84.png",
+    "index.html": "/Agfow/index.html",
+    "main.91de947d.css.map": "/Agfow/static/css/main.91de947d.css.map",
+    "main.abf8f17c.js.map": "/Agfow/static/js/main.abf8f17c.js.map",
+    "787.8bc61f73.chunk.js.map": "/Agfow/static/js/787.8bc61f73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91de947d.css",
+    "static/js/main.abf8f17c.js"
+  ]
+}
